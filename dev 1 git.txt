@@ -1,0 +1,253 @@
+
+Abhiram@DESKTOP-EK1LA5J /c/Sites (master)
+$ git --version
+git version 1.9.4.msysgit.2
+
+Abhiram@DESKTOP-EK1LA5J /c/Sites (master)
+$ git config --list
+core.symlinks=false
+core.autocrlf=false
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+pack.packsizelimit=2g
+help.format=html
+http.sslcainfo=/bin/curl-ca-bundle.crt
+sendemail.smtpserver=/bin/msmtp.exe
+diff.astextplain.textconv=astextplain
+rebase.autosquash=true
+user.name=Abhiram
+user.email=abhiram.gannavaram@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+core.hidedotfiles=dotGitOnly
+
+Abhiram@DESKTOP-EK1LA5J /c/Sites (master)
+$ pwd
+/c/Sites
+
+Abhiram@DESKTOP-EK1LA5J /c/Sites (master)
+$ cd e
+sh.exe": cd: e: No such file or directory
+
+Abhiram@DESKTOP-EK1LA5J /c/Sites (master)
+$ e:
+sh.exe": e:: command not found
+
+Abhiram@DESKTOP-EK1LA5J /c/Sites (master)
+$ pwd
+/c/Sites
+
+Abhiram@DESKTOP-EK1LA5J /c/Sites (master)
+$ cd /e
+
+Abhiram@DESKTOP-EK1LA5J /e
+$ mkdir Myfirstrepo
+
+Abhiram@DESKTOP-EK1LA5J /e
+$ cd Myfirstrepo/
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo
+$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo
+$ git init
+Initialized empty Git repository in e:/Myfirstrepo/.git/
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ ls -al
+total 4
+drwxr-xr-x    1 Abhiram  Administ        0 Feb 21 17:47 .
+drwxr-xr-x    1 Abhiram  Administ     4096 Feb 21 17:45 ..
+drwxr-xr-x    1 Abhiram  Administ     4096 Feb 21 17:47 .git
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ ls
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ vim Hello.txt
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ ls -lrt
+total 1
+-rw-r--r--    1 Abhiram  Administ       39 Feb 21 17:53 Hello.txt
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Hello.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git add Hello.txt
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Hello.txt
+
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git commit -m "my first  text file" Hello.txt
+[master (root-commit) 15c4ad5] my first  text file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Hello.txt
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git log Hello.txt
+commit 15c4ad593d282a185042b7c7cbac1e35a541a568
+Author: Abhiram <abhiram.gannavaram@gmail.com>
+Date:   Wed Feb 21 17:56:20 2018 +0530
+
+    my first  text file
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ vim Hello.txt
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git add Hello.txt
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   Hello.txt
+
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git commit -m "added date into it" Hello.txt
+[master 66aba6f] added date into it
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git log Hello.txt
+commit 66aba6f00dc8a52d1b48d6282373e28ef86465bc
+Author: Abhiram <abhiram.gannavaram@gmail.com>
+Date:   Wed Feb 21 17:59:11 2018 +0530
+
+    added date into it
+
+commit 15c4ad593d282a185042b7c7cbac1e35a541a568
+Author: Abhiram <abhiram.gannavaram@gmail.com>
+Date:   Wed Feb 21 17:56:20 2018 +0530
+
+    my first  text file
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ more Hello.txt
+sh.exe": more: command not found
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ cat Hello.txt
+\Hello This is my first file in \git
+Today's date: 21-Feb
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ ls -lrt
+total 1
+-rw-r--r--    1 Abhiram  Administ       60 Feb 21 17:58 Hello.txt
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ ls -lrt
+total 1
+-rw-r--r--    1 Abhiram  Administ       60 Feb 21 17:58 Hello.txt
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git branch -vv
+* master 66aba6f added date into it
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git branch -a
+* master
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git branch -vvv
+* master 66aba6f added date into it
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git branch -v
+* master 66aba6f added date into it
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ dir
+sh.exe": dir: command not found
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ ls -lrt
+total 1
+-rw-r--r--    1 Abhiram  Administ       60 Feb 21 17:58 Hello.txt
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git branch mylocalbranch
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git branch -a
+* master
+  mylocalbranch
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ ls -lrt
+total 1
+-rw-r--r--    1 Abhiram  Administ       60 Feb 21 17:58 Hello.txt
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (master)
+$ git checkout mylocalbranch
+Switched to branch 'mylocalbranch'
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (mylocalbranch)
+$ git branch -a
+  master
+* mylocalbranch
+
+Abhiram@DESKTOP-EK1LA5J /e/Myfirstrepo (mylocalbranch)
+$
